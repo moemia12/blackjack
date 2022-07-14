@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from "react";
-import { Card } from "./Card";
+import { Card } from "./components/Card";
+import { CardCount } from './components/CardCount';
 
 export default function App() {
 
@@ -21,19 +22,14 @@ export default function App() {
     { card: 2, count: 1 },
   ];
 
-  const [current, setCurrnet] = useState(cards[0]);
+
+  const [currentCount, setCount] = useState(0);
 
   return (
     <View style={styles.app}>
-      <View style={styles.current}>
-        <Card item={current} />
-      </View>
+      <CardCount useState={currentCount}/>
       <View style={styles.cards}>
-        {cards.map((i) =>
-          current.card !== i.card ? (
-            <Card item={i} selectCard={() => setCurrnet(i)} />
-          ) : null
-        )}
+      {cards.map((index) =>(<Card item={index}/>))}
       </View>
     </View>
   );
@@ -42,7 +38,9 @@ export default function App() {
 const styles = StyleSheet.create({
   app: {
     marginHorizontal: "auto",
-    maxWidth: 500
+    maxWidth: 500,
+    flex: 1,
+    justifyContent: 'flex-end'
   },
   current: {
     flexDirection: "row",
@@ -51,6 +49,7 @@ const styles = StyleSheet.create({
   cards: {
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+
   }
 });
