@@ -25,17 +25,18 @@ export default function App() {
 
   const [currentCount, setCount] = useState(0);
 
-  const onPressCard = () =>{
+  const onPressCard = (cards) =>{
 
-    setCount + 1
+    console.log(cards)
 
-  }
+
+  } 
 
   return (
     <View style={styles.app}>
       <CardCount useState={currentCount}/>
-      <View style={styles.cards} onPress={onPressCard()}>
-      {cards.map((index) =>(<Card item={index} />))}
+      <View style={styles.cards} >
+      {cards.map((index) =>(<Card item={index}/>))}
       </View>
     </View>
   );
