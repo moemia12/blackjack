@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 export const Card = ({ item, selectCard }) => {
   return (
-    <TouchableOpacity onPress={selectCard} style={styles.grid}>
+    <TouchableOpacity onPress={() => selectCard(item)} style={styles.grid}>
       <View>
         <Text style={styles.font}>{item.card}</Text>
       </View>

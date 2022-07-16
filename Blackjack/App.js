@@ -3,6 +3,8 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import React, { useState } from "react";
 import { Card } from "./components/Card";
 import { CardCount } from './components/CardCount';
+import { CardStack } from './components/cardStack';
+import cardPics from './cardPics'
 
 export default function App() {
 
@@ -25,18 +27,31 @@ export default function App() {
 
   const [currentCount, setCount] = useState(0);
 
-  const onPressCard = (cards) =>{
-
-    console.log(cards)
-
-
+  const onPressCard = (card) =>{
+    setCount(currentCount + card.count)
   } 
+
+  const onPressClear = () =>{
+    setCount(0)
+  } 
+
 
   return (
     <View style={styles.app}>
+      <CardStack/>
       <CardCount useState={currentCount}/>
       <View style={styles.cards} >
-      {cards.map((index) =>(<Card item={index}/>))}
+      {cards.map((card) =>(
+        <Card item={card} 
+        selectCard={onPressCard} 
+        />
+      ))}
+
+      <TouchableOpacity onPress={onPressClear}>
+        <Text style={styles.clearButton}>C</Text>
+      </TouchableOpacity>
+
+
       </View>
     </View>
   );
@@ -58,4 +73,14 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "space-between"
   },
+  clearButton: {
+    fontSize: 30,
+    backgroundColor: "#202020",
+    color: 'white',
+    width: 274,
+    height: 70,
+    margin: 1,
+    textAlign: 'center',
+    lineHeight: 70
+  }
 });
