@@ -6,22 +6,23 @@ import { CardCount } from './components/CardCount';
 import { CardStack } from './components/CardStack';
 
 
+
 export default function App() {
 
   const cards = [
-    { card: "A", count: -1 },
+    { card: "A", count: -1},
     { card: "K", count: -1 },
     { card: "Q", count: -1 },
     { card: "J", count: -1 },
-    { card: 10, count: -1 },
-    { card: 9, count: 0 },
-    { card: 8, count: 0 },
+    { card: 10, count: -1},
+    { card: 9, count: 0},
+    { card: 8, count: 0},
     { card: 7, count: 0 },
     { card: 6, count: 1 },
-    { card: 5, count: 1 },
-    { card: 4, count: 1 },
-    { card: 3, count: 1 },
-    { card: 2, count: 1 },
+    { card: 5, count: 1},
+    { card: 4, count: 1},
+    { card: 3, count: 1},
+    { card: 2, count: 1},
   ];
 
 

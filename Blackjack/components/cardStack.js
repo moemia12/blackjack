@@ -1,11 +1,9 @@
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-
 export const CardStack = ({  }) => {
   return (
       <View style={styles.cardStack}>
-        <Text style={{color: 'white'}}>noo</Text>
-        
+        <Text style={{color: 'white'}}>nolpo</Text>
       </View>
   );
 };
