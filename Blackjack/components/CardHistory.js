@@ -1,9 +1,10 @@
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
+
 
 export const CardStack = ({  }) => {
   return (
       <View style={styles.cardStack}>
-        <Text style={{color: 'white'}}>nolpo</Text>
+        <Image style={styles.image} source={require('../assets/images/card-2.png')}/> 
       </View>
   );
 };
@@ -18,6 +19,11 @@ cardStack:{
     alignItems: "center",
     backgroundColor: "#202020",
     margin: 1,
+},
+image: {
+  height: 60,
+  width: 40,
+  top: 10
 }
 
 })

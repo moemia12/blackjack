@@ -3,7 +3,7 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import React, { useState } from "react";
 import { Card } from "./components/Card";
 import { CardCount } from './components/CardCount';
-import { CardStack } from './components/CardStack';
+import { CardStack } from './components/CardHistory';
 
 
 
