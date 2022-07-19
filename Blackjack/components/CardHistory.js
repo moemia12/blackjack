@@ -1,10 +1,14 @@
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
+import { cardPics } from "../assets/cardPics";
 
 
-export const CardStack = ({  }) => {
+export const CardHistory = ({}) => {
+
+  
+
   return (
       <View style={styles.cardStack}>
-        <Image style={styles.image} source={require('../assets/images/card-2.png')}/> 
+        <Image style={styles.image} source={cardPics.ace}/> 
       </View>
   );
 };
@@ -23,7 +27,9 @@ cardStack:{
 image: {
   height: 60,
   width: 40,
-  top: 10
+  top: 10,
+  alignSelf: 'flex-end',
+  marginRight: 10
 }
 
 })

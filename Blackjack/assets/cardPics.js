@@ -1,30 +1,15 @@
-
-const two = require("./assets/images/card-2.png")
-const three = require("./assets/images/card-3.png")
-const four = require("./assets/images/card-4.png")
-const five = require("./assets/images/card-5.png")
-const six = require("./assets/images/card-6.png")
-const seven = require("./assets/images/card-7.png")
-const eight = require("./assets/images/card-8.png")
-const nine = require("./assets/images/card-9.png")
-const ten = require("./assets/images/card-10.png")
-const jack = require("./assets/images/card-J.png")
-const queen = require("./assets/images/card-Q.png")
-const king = require("./assets/images/card-K.png")
-const ace = require("./assets/images/card-A.png")
-
-export default cardPics = {
-two,
-three,
-four,
-five,
-six,
-seven, 
-eight, 
-nine,
-ten,
-jack, 
-queen, 
-king, 
-ace
+export const cardPics = {
+    two: require('../assets/images/card-2.png'),
+    three: require('../assets/images/card-3.png'),
+    four: require('../assets/images/card-4.png'),
+    five: require('../assets/images/card-5.png'),
+    six: require('../assets/images/card-6.png'),
+    seven: require('../assets/images/card-7.png'),
+    eight: require('../assets/images/card-8.png'),
+    nine: require('../assets/images/card-9.png'),
+    ten: require('../assets/images/card-10.png'),
+    jack: require('../assets/images/card-J.png'), 
+    queen: require('../assets/images/card-Q.png'),
+    king: require('../assets/images/card-K.png'),
+    ace: require('../assets/images/card-A.png')
 }
