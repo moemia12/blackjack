@@ -4,32 +4,35 @@ import React, { useState } from "react";
 import { Card } from "./components/Card";
 import { CardCount } from './components/CardCount';
 import { CardHistory } from './components/CardHistory';
+import { cardPics } from './assets/cardPics';
 
 
 
 export default function App() {
 
   const cards = [
-    { card: "A", count: -1},
-    { card: "K", count: -1 },
-    { card: "Q", count: -1 },
-    { card: "J", count: -1 },
-    { card: 10, count: -1},
-    { card: 9, count: 0},
-    { card: 8, count: 0},
-    { card: 7, count: 0 },
-    { card: 6, count: 1 },
-    { card: 5, count: 1},
-    { card: 4, count: 1},
-    { card: 3, count: 1},
-    { card: 2, count: 1},
+    { card: "A", count: -1, pic: cardPics.ace },
+    { card: "K", count: -1, pic: cardPics.king },
+    { card: "Q", count: -1, pic: cardPics.queen },
+    { card: "J", count: -1, pic: cardPics.jack },
+    { card: 10, count: -1, pic: cardPics.ten },
+    { card: 9, count: 0, pic: cardPics.nine },
+    { card: 8, count: 0, pic: cardPics.eight },
+    { card: 7, count: 0, pic: cardPics.seven },
+    { card: 6, count: 1, pic: cardPics.six },
+    { card: 5, count: 1, pic: cardPics.five },
+    { card: 4, count: 1, pic: cardPics.four },
+    { card: 3, count: 1, pic: cardPics.three },
+    { card: 2, count: 1, pic: cardPics.two },
   ];
 
 
   const [currentCount, setCount] = useState(0);
+  const [ currentPic, setPic ] = useState(null)
 
   const onPressCard = (card) =>{
     setCount(currentCount + card.count)
+    setPic(card.pic)
   } 
 
   const onPressClear = () =>{
@@ -39,7 +42,7 @@ export default function App() {
 
   return (
     <View style={styles.app}>
-      <CardHistory/>
+      <CardHistory useState={currentPic}/>
       <CardCount useState={currentCount}/>
       <View style={styles.cards} >
       {cards.map((card) =>(

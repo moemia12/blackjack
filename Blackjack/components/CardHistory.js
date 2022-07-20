@@ -1,14 +1,11 @@
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { cardPics } from "../assets/cardPics";
+import React, { useState } from "react";
 
-
-export const CardHistory = ({}) => {
-
-  
-
+export const CardHistory = ({useState}) => {
   return (
       <View style={styles.cardStack}>
-        <Image style={styles.image} source={cardPics.ace}/> 
+        <Image style={styles.image} source={useState}/> 
       </View>
   );
 };
