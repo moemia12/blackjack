@@ -26,23 +26,29 @@ export default function App() {
     { card: 2, count: 1, pic: cardPics.two },
   ];
 
-
   const [currentCount, setCount] = useState(0);
-  const [ currentPic, setPic ] = useState(null)
+  const [currentPic, setPic ] = useState(null);
+  const [cardHistory, setHistory] = useState([]);
 
   const onPressCard = (card) =>{
     setCount(currentCount + card.count)
     setPic(card.pic)
-  } 
+
+    setHistory([...cardHistory, card]);
+    console.log('cardHistory', cardHistory);
+  }   
 
   const onPressClear = () =>{
     setCount(0)
+    setHistory([]);
   } 
 
+  
+  
 
   return (
     <View style={styles.app}>
-      <CardHistory useState={currentPic}/>
+      <CardHistory currentPic={currentPic} history={[...cardHistory]}/>
       <CardCount useState={currentCount}/>
       <View style={styles.cards} >
       {cards.map((card) =>(
