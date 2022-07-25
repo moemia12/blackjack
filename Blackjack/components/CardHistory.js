@@ -11,11 +11,7 @@ export const CardHistory = ({currentPic, history}) => {
     
      <Image style={styles.image} source={currentPic}/> 
     
-    { history.map(
-      (item) => 
-      <Image style={styles.imageHistory} source={item.pic}/>
-
-    )}
+    { history.map((item) => <Image style={styles.imageHistory} source={item.pic}/>)}
       </View>
   );
 };
