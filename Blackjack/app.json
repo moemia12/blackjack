@@ -1,6 +1,7 @@
 {
   "expo": {
-    "name": "Blackjack",
+    "owner": "prolikemo",
+    "name": "Blackjack Card Counter",
     "slug": "Blackjack",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -28,6 +29,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }

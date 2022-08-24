@@ -20,6 +20,7 @@ grid:{
     alignItems: "center",
     backgroundColor: "#202020",
     margin: 1,
+    borderRadius: 5
 },
 font:{
   color: 'white'

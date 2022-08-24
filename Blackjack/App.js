@@ -56,7 +56,6 @@ export default function App() {
         selectCard={onPressCard} 
         />
       ))}
-
       <TouchableOpacity onPress={onPressClear}>
         <Text style={styles.clearButton}>C</Text>
       </TouchableOpacity>

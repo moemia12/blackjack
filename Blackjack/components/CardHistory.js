@@ -1,45 +1,54 @@
-import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView } from "react-native";
 import { cardPics } from "../assets/cardPics";
 import React, { useState } from "react";
 
-export const CardHistory = ({currentPic, history}) => {
+export const CardHistory = ({history}) => {
 
-  console.log('in component', history)
+let backCount = 0
+// press back button
+//let cards = history.length <= 8 ? history : history.splice(history.length - 9, 9)
+
+
   return (
-    <View style={styles.cardStack}>
-
-    
-     <Image style={styles.image} source={currentPic}/> 
-    
+    <View style={styles.container}>
+    <ScrollView style={styles.cardStack} horizontal={true}>
     { history.map((item) => <Image style={styles.imageHistory} source={item.pic}/>)}
-      </View>
+    </ScrollView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
 
+container:{
+height: 130,
+bottom: 68,
+width: '100%'
+},
+
 cardStack:{
-    bottom: 106,
-    width: 'max-width',
-    height: 100,
     backgroundColor: "#202020",
     margin: 1, 
+    paddingLeft: 5,
+    bottom: 10
 },
-image: {
+firstCard: {
   height: 60,
   width: 40,
-  top: 10,
-  alignSelf: 'flex-end',
-  marginRight: 10
+  top: 31,
+  alignSelf: 'flex-start',
+  marginRight: 10,
+  marginLeft: 10
 },
 imageHistory: {
   display: 'block',
   height: 60,
   width: 40,
-  top: 30,
-  alignSelf: 'flex-end',
+  top: 40,
+  alignSelf: 'flex-start',
+  margin: 1,
   overflow: 'scroll',
-  display: 'inline-block'
+  
 }
 
 })
