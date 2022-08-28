@@ -14,12 +14,12 @@ const styles = StyleSheet.create({
 
 grid:{
     flexDirection: "column",
-    width: 136,
+    width: 134,
     height: 70,
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: "#202020",
-    margin: 1,
+    margin: 2,
     borderRadius: 5
 },
 font:{

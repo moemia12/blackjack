@@ -1,17 +1,18 @@
-import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView, FlatList } from "react-native";
 import { cardPics } from "../assets/cardPics";
-import React, { useState } from "react";
+import React, { useRef } from "react";
 
 export const CardHistory = ({history}) => {
-
-let backCount = 0
-// press back button
-//let cards = history.length <= 8 ? history : history.splice(history.length - 9, 9)
-
+  const scrollViewRef = useRef()
 
   return (
     <View style={styles.container}>
-    <ScrollView style={styles.cardStack} horizontal={true}>
+    <ScrollView 
+    ref={scrollViewRef}
+    onContentSizeChange={() => scrollViewRef.current.scrollToEnd({ animated: true })}
+    style={styles.cardStack} 
+    horizontal={true}
+    >
     { history.map((item) => <Image style={styles.imageHistory} source={item.pic}/>)}
     </ScrollView>
     </View>
