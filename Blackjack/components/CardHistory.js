@@ -22,16 +22,18 @@ export const CardHistory = ({history}) => {
 const styles = StyleSheet.create({
 
 container:{
+backgroundColor: "#202020",
 height: 130,
 bottom: 68,
-width: '100%'
+width: '100%',
+
 },
 
 cardStack:{
     backgroundColor: "#202020",
-    margin: 1, 
-    paddingLeft: 5,
-    bottom: 10
+    margin: 10, 
+    bottom: 10,
+
 },
 firstCard: {
   height: 60,
@@ -49,7 +51,6 @@ imageHistory: {
   alignSelf: 'flex-start',
   margin: 1,
   overflow: 'scroll',
-  
 }
 
 })

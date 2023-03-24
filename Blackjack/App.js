@@ -75,7 +75,7 @@ export default function App() {
         <Text style={styles.clearText}>C</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.clearButton} onPress={onPressBack}>
-        <Text style={styles.clearText}>🔙</Text>
+        <Text style={styles.clearText}>◄</Text>
       </TouchableOpacity>
 
       </View>
